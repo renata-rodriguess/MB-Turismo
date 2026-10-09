@@ -1,0 +1,246 @@
+.pagina-trilha {
+    min-height: 100vh;
+    width: 100%;
+    padding: 30px 20px 50px;
+    background: #f8f4d9;
+    overflow-x: hidden;
+}
+
+.btn-voltar-trilha {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 20;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.95);
+    color: #000;
+    font-size: 30px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+.btn-voltar-trilha:hover {
+    transform: scale(1.05);
+}
+
+.cabecalho-trilha {
+    width: min(100%, 850px);
+    margin: 0 auto;
+    padding-top: 70px;
+    text-align: center;
+}
+
+.cabecalho-trilha h1 {
+    margin: 0 0 25px;
+    color: #000;
+    font-family: Arial, sans-serif;
+    font-size: clamp(26px, 5vw, 42px);
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.imagem-trilha {
+    width: 100%;
+    height: 330px;
+    display: block;
+    object-fit: cover;
+    object-position: center 85%;
+    border-radius: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+.quadro-trilha {
+    width: min(100%, 700px);
+    margin: 35px auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+.quadro-trilha .mensagem-trilha {
+    min-height: auto;
+    width: 100%;
+    padding: 20px;
+    line-height: 1.7;
+}
+
+.item-trilha {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    gap: 20px;
+}
+
+.item-trilha:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: 29px;
+    top: 58px;
+    width: 4px;
+    height: calc(100% - 20px);
+    background: #f28c28;
+}
+
+.numero-etapa {
+    position: relative;
+    z-index: 2;
+    width: 58px;
+    height: 58px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #f28c28;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.conteudo-etapa {
+    flex: 1;
+    margin-bottom: 25px;
+    padding: 20px 22px;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.conteudo-etapa h2 {
+    margin: 0 0 8px;
+    color: #000;
+    font-family: Arial, sans-serif;
+    font-size: 21px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.conteudo-etapa p {
+    margin: 0;
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.mensagem-trilha {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    color: #222;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    text-align: center;
+}
+
+@media (max-width: 700px) {
+    .pagina-trilha {
+        padding: 25px 15px 40px;
+    }
+
+    .btn-voltar-trilha {
+        top: 15px;
+        left: 15px;
+        width: 44px;
+        height: 44px;
+        font-size: 27px;
+    }
+
+    .cabecalho-trilha {
+        padding-top: 55px;
+    }
+
+    .imagem-trilha {
+        height: 250px;
+        border-radius: 20px;
+    }
+
+    .quadro-trilha {
+        margin-top: 25px;
+    }
+
+    .item-trilha {
+        gap: 12px;
+    }
+
+    .item-trilha:not(:last-child)::after {
+        left: 24px;
+        top: 48px;
+    }
+
+    .numero-etapa {
+        width: 48px;
+        height: 48px;
+        font-size: 18px;
+    }
+
+    .conteudo-etapa {
+        padding: 15px;
+        margin-bottom: 18px;
+    }
+
+    .conteudo-etapa h2 {
+        font-size: 17px;
+    }
+
+    .conteudo-etapa p {
+        font-size: 14px;
+    }
+
+    .quadro-trilha .mensagem-trilha {
+        padding: 15px 5px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cabecalho-trilha h1 {
+        font-size: 23px;
+    }
+
+    .imagem-trilha {
+        height: 210px;
+    }
+
+    .item-trilha {
+        gap: 10px;
+    }
+
+    .numero-etapa {
+        width: 42px;
+        height: 42px;
+        font-size: 16px;
+    }
+
+    .item-trilha:not(:last-child)::after {
+        left: 20px;
+        top: 42px;
+    }
+
+    .conteudo-etapa {
+        padding: 13px;
+    }
+
+    .conteudo-etapa h2 {
+        font-size: 15px;
+    }
+
+    .conteudo-etapa p {
+        font-size: 13px;
+    }
+}
+
+.pagina-trilha:has(.quadro-trilha .mensagem-trilha) .cabecalho-trilha,
+.pagina-trilha:has(.quadro-trilha .mensagem-trilha) .imagem-trilha {
+    display: none;
+}

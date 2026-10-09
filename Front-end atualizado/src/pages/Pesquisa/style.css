@@ -1,0 +1,293 @@
+.tela-pesquisa {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    padding: 90px 20px 40px;
+    background-color: #b2ff80;
+    background-image: url("/imagens/milton-mirante.jpeg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.btn-voltar {
+    position: absolute;
+    top: 90px;
+    left: calc(50% - 430px);
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    color: #000;
+    font-size: 30px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-voltar:hover {
+    transform: scale(1.05);
+}
+
+.conteudo-pesquisa {
+    position: relative;
+    z-index: 2;
+    width: min(100%, 850px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.barra-pesquisa {
+    width: min(100%, 700px);
+    min-height: 58px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 22px;
+    background: #f8f4d9;
+    border-radius: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.icone-pesquisa {
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.campo-pesquisa {
+    width: 100%;
+    min-width: 0;
+    height: 42px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #000;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+.campo-pesquisa::placeholder {
+    color: #555;
+    opacity: 1;
+}
+
+.resultados-pesquisa {
+    width: min(100%, 700px);
+    max-height: calc(100vh - 180px);
+    margin-top: 25px;
+    padding-right: 6px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.resultado-ponto {
+    width: 100%;
+    min-height: 145px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+    background: rgba(248, 244, 217, 0.96);
+    border-radius: 18px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.22);
+    cursor: pointer;
+}
+
+.resultado-ponto:hover {
+    transform: translateY(-2px);
+}
+
+.imagem-resultado {
+    width: 190px;
+    height: 115px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 14px;
+    background: #d8d8d8;
+}
+
+.imagem-resultado img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.informacoes-ponto {
+    min-width: 0;
+    flex: 1;
+}
+
+.informacoes-ponto h2 {
+    margin: 0 0 6px;
+    color: #000;
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.informacoes-ponto span {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: #5b3c24;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.informacoes-ponto p {
+    margin: 0;
+    color: #222;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.mensagem-pesquisa {
+    width: 100%;
+    padding: 20px;
+    border-radius: 16px;
+    background: rgba(248, 244, 217, 0.96);
+    color: #000;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+@media (max-width: 900px) {
+    .btn-voltar {
+        left: 20px;
+    }
+}
+
+@media (max-width: 700px) {
+    .tela-pesquisa {
+        padding: 85px 15px 30px;
+        background-attachment: scroll;
+    }
+
+    .btn-voltar {
+        top: 85px;
+        left: 15px;
+        width: 44px;
+        height: 44px;
+        font-size: 27px;
+    }
+
+    .barra-pesquisa {
+        min-height: 54px;
+        padding: 7px 17px;
+    }
+
+    .campo-pesquisa {
+        font-size: 14px;
+    }
+
+    .resultados-pesquisa {
+        max-height: calc(100vh - 165px);
+        margin-top: 20px;
+    }
+
+    .resultado-ponto {
+        min-height: auto;
+        align-items: flex-start;
+        gap: 14px;
+        padding: 12px;
+    }
+
+    .imagem-resultado {
+        width: 125px;
+        height: 100px;
+    }
+
+    .informacoes-ponto h2 {
+        font-size: 18px;
+    }
+
+    .informacoes-ponto p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tela-pesquisa {
+        padding: 78px 12px 25px;
+    }
+
+    .btn-voltar {
+        top: 78px;
+        left: 12px;
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+    }
+
+    .barra-pesquisa {
+        min-height: 50px;
+        gap: 8px;
+        padding: 6px 14px;
+    }
+
+    .icone-pesquisa {
+        width: 28px;
+        height: 28px;
+        font-size: 19px;
+    }
+
+    .campo-pesquisa {
+        height: 38px;
+        font-size: 13px;
+    }
+
+    .resultados-pesquisa {
+        margin-top: 15px;
+        gap: 12px;
+        max-height: calc(100vh - 145px);
+    }
+
+    .resultado-ponto {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .imagem-resultado {
+        width: 100%;
+        height: 150px;
+    }
+
+    .informacoes-ponto {
+        width: 100%;
+    }
+
+    .informacoes-ponto h2 {
+        font-size: 17px;
+    }
+
+    .informacoes-ponto p {
+        font-size: 13px;
+    }
+}

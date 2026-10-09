@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #b2ff80;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    background: #b2ff80;
+}
+
+.container h1 {
+    color: #000;
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.container form {
+    width: min(100%, 430px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.container .campo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+}
+
+.container label {
+    width: 95px;
+    flex-shrink: 0;
+    text-align: right;
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.container input {
+    width: min(280px, 100%);
+    height: 42px;
+    padding: 0 15px;
+    border: none;
+    border-radius: 22px;
+    background: #f8f4d9;
+    outline: none;
+    font-size: 16px;
+}
+
+.container input:focus {
+    outline: 2px solid #7a5230;
+}
+
+.container button {
+    width: min(240px, 100%);
+    min-height: 50px;
+    margin-top: 25px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 26px;
+    background: #7a5230;
+    color: #000;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.container button + button {
+    margin-top: 0;
+}
+
+.container button:hover {
+    filter: brightness(0.93);
+}
+
+.container button:active {
+    transform: scale(0.98);
+}
+
+.container button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.mensagem-erro {
+    width: min(100%, 350px);
+    text-align: center;
+    color: #a00000;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 30px 20px;
+    }
+
+    .container h1 {
+        margin-bottom: 30px;
+        font-size: clamp(30px, 9vw, 40px);
+    }
+
+    .container form {
+        width: min(100%, 360px);
+        gap: 15px;
+    }
+
+    .container .campo {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 6px;
+    }
+
+    .container label {
+        width: 100%;
+        text-align: left;
+        font-size: 15px;
+    }
+
+    .container input {
+        width: 100%;
+        height: 44px;
+    }
+
+    .container button {
+        width: 100%;
+        max-width: 280px;
+        margin-top: 20px;
+    }
+
+    .container button + button {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 380px) {
+    .container {
+        padding: 20px 15px;
+    }
+
+    .container h1 {
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+
+    .container input {
+        height: 40px;
+    }
+
+    .container button {
+        min-height: 46px;
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    .container {
+        padding: 40px 25px;
+    }
+
+    .container h1 {
+        margin-bottom: 40px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container h1 {
+        margin-bottom: 50px;
+    }
+}
