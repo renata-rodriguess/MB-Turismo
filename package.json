@@ -1,0 +1,23 @@
+{
+  "name": "back-end-do-segundo-trabalho1",
+  "version": "1.0.0",
+  "description": "API DevShowcase - Plataforma de Portfólio",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "joi": "^18.2.9",
+    "mongoose": "^9.10.1",
+    "swagger-ui-express": "^5.0.1",
+    "yamljs": "^0.3.0"
+  }
+}
