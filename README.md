@@ -1,1 +1,1 @@
-Em andamento o desenvolvimento das telas.
+As pastas antigas foram apagadas e substituídas por essas atualizadas.
